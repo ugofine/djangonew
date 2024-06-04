@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{%block content %}
+
+   <h1>my home page block for testing</h1>
+   <button style="background-color: blueviolet; padding: 10px; border-radius: 20px;"> <a href="createpage" style="color: aquamarine;">Createpage</a></button>
+
+    {% for i in posts %}
+       <p>{{i.id}}</p>
+      <h1>{{i.title}}</h1>
+      <p>{{i.content}}</p>
+      <p>{{i.date}}</p>
+      <button><a href="delete/{{i.id}}" style="background-color: brown; color: aliceblue; padding-left: 10px;">DELETE</a></button>
+    {% endfor %}  
+
+{% endblock content %}   
